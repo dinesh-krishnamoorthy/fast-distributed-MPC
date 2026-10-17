@@ -69,11 +69,11 @@ jupyter notebook sens_dmpc_quadrotors_realtime.ipynb   # ADMM stopped at the sam
 
 Point-to-point scenario:
 
-![figures/fig_closedloop.png](figures/fig_closedloop.png)
+![](figures/fig_closedloop.pdf)
 
 Tracking scenario:
 
-![](figures/fig_tracking.png)
+![](figures/fig_tracking.pdf)
 
 Panels: (a) closed-loop paths, (b) distance of the closest pair, (c) average tracking error,
 (d) online computation time per sample, (e) local updates per sample in the proposed method.
