@@ -69,7 +69,7 @@ jupyter notebook sens_dmpc_quadrotors_realtime.ipynb   # ADMM stopped at the sam
 
 Point-to-point scenario:
 
-![](figures/fig_closedloop.png)
+![figures/fig_closedloop.png](figures/fig_closedloop.png)
 
 Tracking scenario:
 
