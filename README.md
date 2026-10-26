@@ -44,18 +44,9 @@ distance of 1 m from each other, in two scenarios:
 Three controllers are compared: centralized NMPC, standard distributed NMPC (exact local solves
 with IPOPT in every round) and the proposed sensitivity-assisted distributed NMPC.
 
-## Installation
-
-Python 3.10 or newer is required.
-
-```bash
-git clone https://github.com/<user>/<repository>.git
-cd <repository>
-pip install -r requirements.txt
-```
 
 The local problems are formulated with the CasADi `Opti` stack and solved with IPOPT, which is
-included in the CasADi package. The results in the paper were obtained with CasADi 3.7.2.
+included in the CasADi package. The results in the repo were obtained with CasADi 3.7.2.
 
 
 ## Usage
@@ -65,37 +56,10 @@ jupyter notebook sens_dmpc_quadrotors.ipynb            # results of the paper
 jupyter notebook sens_dmpc_quadrotors_realtime.ipynb   # ADMM stopped at the sampling time
 ```
 
-## Results
-
-Point-to-point scenario:
-
-![](figures/closedloop_point_to_point.gif)
-
-Tracking scenario:
-
-![](figures/closedloop_tracking.gif)
-
-Panels: (a) closed-loop paths, (b) distance of the closest pair, (c) average tracking error,
-(d) online computation time per sample, (e) local updates per sample in the proposed method.
-
-Summary of the two distributed schemes (single core of an Apple M4 Pro, CasADi 3.7.2):
-
-| | Point-to-point: standard | Point-to-point: proposed | Tracking: standard | Tracking: proposed |
-|---|:---:|:---:|:---:|:---:|
-| computation per sample, mean / max [ms] | 46.1 / 161.9 | 10.7 / 40.3 | 119.0 / 245.1 | 34.3 / 116.8 |
-| samples with computation > T<sub>s</sub> = 100 ms | 12 % | 0 % | 60 % | 4 % |
-| exact local solves | 1557 | 152 | 5850 | 424 |
-| sensitivity updates (rejected) | – | 1405 (2) | – | 5426 (184) |
-| max. deviation of the closed-loop trajectories [m] | | 1.4·10⁻⁵ | | 5.9·10⁻⁵ |
-
-The proposed method yields the same closed-loop trajectories as standard distributed NMPC, while
-reducing the computation time by a factor of 3.5–4.3.
-
-
 
 ## Citation
 
-If you use this code, please cite the paper above and the archived software:
+If you use this code, please cite the archived software:
 
 ```bibtex
 @software{krishnamoorthy2026code,
