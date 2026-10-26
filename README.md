@@ -41,6 +41,16 @@ distance of 1 m from each other, in two scenarios:
 1. **Point-to-point:** the quadrotors swap sides through a common region.
 2. **Tracking:** the quadrotors follow three intersecting elliptical orbits.
 
+
+Point-to-point scenario:
+
+![](figures/closedloop_point_to_point.gif)
+
+Tracking scenario:
+
+![](figures/closedloop_tracking.gif)
+
+
 Three controllers are compared: centralized NMPC, standard distributed NMPC (exact local solves
 with IPOPT in every round) and the proposed sensitivity-assisted distributed NMPC.
 
